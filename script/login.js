@@ -8,13 +8,13 @@ function(event){
 
     if(accountNumber.length === 11){
         if(convertedPin === 1234){
-            console.log('Correct PIN');
+            window.location.href='./main.html';
         }
         else{
-            console.log('Wrong PIN');
+            alert('Wrong PIN');
         }
     }
     else{
-        console.log('Need valid account number');
+        alert('Need valid account number');
     }
 })
