@@ -8,11 +8,16 @@ function(event){
     const mainBalance = document.getElementById('main-balance').innerText;
     const convertedMainBalance = parseFloat(mainBalance);
 
-    if(convertedPin === 1234){
-        const sum = convertedMainBalance + convertedAmount;
-        document.getElementById('main-balance').innerText = sum;
+    if(amount && pin){
+        if(convertedPin === 1234){
+            const sum = convertedMainBalance + convertedAmount;
+            document.getElementById('main-balance').innerText = sum;
+        }
+        else{
+            alert('Wrong PIN');
+        }
     }
     else{
-        alert('Wrong PIN');
+        alert('Enter Amount');
     }
 })
